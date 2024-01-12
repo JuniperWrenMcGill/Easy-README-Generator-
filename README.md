@@ -1,24 +1,25 @@
 # Easy README Generator 
 
 ## Description
+ A well-documented README is crucial for users to understand the functionality, installation steps, and usage of your CLI tool. This project streamlines the process of creating a README file. Users can us this program to create unique README.md files by answering the command line prompts. 
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [Questions](#questions)
+![screanshot of application in use](imgs/finished.png)
 
-## Installation
 
-## Usage
+## Installation and Usage 
+
+Before running this application be sure to follow the following instructions. 
+1. Git clone this repo into your local device. 
+2. Navigate into cloned local repo on your local device. 
+3. Open local repo in code editor. 
+4. Open integrated terminal 
+5. Install inquirer 8.2.4 by running the following command in the integrated terminal: [ npm i inquirer@8.2.4 ]
+6. Run application by running the following command in the integrated terminal :[ node index.js ]
+7. Answer the ALL the prompts via the command line to your satisfaction
+8. Review your created  README file 
+
+[Video Demonstration: How to install and use this application (run time 4:46)](https://drive.google.com/file/d/1ITeqT2yn9MVW296IuBpRRbtV7zGEr-ZV/view)
+
 
 ## License
-
-## Contributing
-
-## Tests
-
-## Questions
-
+This project is licensed under the MIT license. 
