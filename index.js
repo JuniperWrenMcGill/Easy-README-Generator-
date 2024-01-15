@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+
 // array of questions for user input
 const questions = [
   {
@@ -48,9 +49,15 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'questions',
-    message: 'Provide details on how others can contact you to ask questions.',
+    name: 'githubUsername',
+    message: 'What is your Github username?',
   },
+  {
+    type: 'input',
+    name: 'emailAddress',
+    message: 'What is your email address?',
+  },
+  
 ];
 
 // promt user with questions
@@ -59,14 +66,29 @@ inquirer.prompt(questions).then((data) => {
   const filename = `${data.projectName.toLowerCase().split(' ').join('')}.README.md`;
 
 // generate the content for the README using the gathered data
-  const readmeContent = `
+const tableOfContents = [
+  'Installation',
+  'Usage',
+  'License',
+  'Contributing',
+  'Tests',
+  'Questions',
+].map((item) => `[${item}](#${item.toLowerCase()})`);
+
+
+const tableOfContentsString = tableOfContents.join('\n-');
+const licenseBadge = `![License](https://img.shields.io/badge/license-${data.license}-brightgreen)`;
+
+const readmeContent = `
 # ${data.projectName}
+
+${licenseBadge}
 
 ## Description
 ${data.description}
 
 ## Table of Contents
-${data.tableOfContents.join('\n')}
+${tableOfContents.join('\n- ')}
 
 ## Installation
 ${data.installation}
@@ -77,14 +99,14 @@ ${data.usage}
 ## License
 This project is licensed under the ${data.license} license.
 
-## Contributing
+## Contributions 
 ${data.contributing}
 
 ## Tests
 ${data.tests}
 
 ## Questions
-For any questions, please contact me at ${data.questions}.
+For any questions, please contact me at [${data.githubUsername}](https://github.com/${data.githubUsername}) or [email me](mailto:${data.emailAddress}).
 `;
 
 // write the generated content to a file with the generated filename
