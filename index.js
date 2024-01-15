@@ -67,12 +67,14 @@ inquirer.prompt(questions).then((data) => {
 
 // generate the content for the README using the gathered data
 const tableOfContents = [
+
   'Installation',
   'Usage',
   'License',
   'Contributing',
   'Tests',
   'Questions',
+  
 ].map((item) => `[${item}](#${item.toLowerCase()})`);
 
 
