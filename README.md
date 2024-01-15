@@ -1,5 +1,5 @@
 # Easy README Generator 
-
+![License](https://img.shields.io/badge/license-MIT-brightgreen)
 ## Description
  A well-documented README is crucial for users to understand the functionality, installation steps, and usage of your CLI tool. This project streamlines the process of creating a README file. Users can us this program to create unique README.md files by answering the command line prompts. 
 
@@ -25,3 +25,7 @@ This project includes starter code provided by UNCC Full-Stack Bootcamp.
 
 ## License
 This project is licensed under the MIT license. 
+
+## Questions
+For any questions, please contact me at [JuniperWrenMcGill](https://github.com/JuniperWrenMcGill) or [email me](mailto:juniperwrenart@gmail.com ).
+
